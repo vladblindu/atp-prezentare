@@ -13,21 +13,21 @@ const Header = () => (
         </div>
       </div>
       <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
+        <AnchorLink className="px-4" href="#beneficii">
+          Beneficii
         </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
+        <AnchorLink className="px-4" href="#utilizatori">
+          Utilizatori
         </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
+        <AnchorLink className="px-4" href="#Ecosistem">
+          Ecosistem
         </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
+        <AnchorLink className="px-4" href="#structura">
+          Resurse
         </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <a href="https://github.com">
+        <a href="https://github.com/vladblindu/atp-prezentare">
           <Button>
             <div className="flex text-lg">
             <img  src={githubLogo} alt="github logo" width="30" height="30"/>
