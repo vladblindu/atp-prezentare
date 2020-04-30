@@ -9,7 +9,6 @@ const Header = () => {
   return(
     <header className="sticky top-0 justify-between bg-secondary shadow">
       <div className="absolute flex items-center sm:hidden">
-        {/*button menu*/}
         <SidebarMenu
           className="text-primary pt-2 pl-2"
           opened={!opened}

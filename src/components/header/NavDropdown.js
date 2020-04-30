@@ -1,5 +1,5 @@
 import React from "react";
-import AnchorLink from 'react-anchor-link-smooth-scroll/src'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Button from '../Button'
 import githubLogo from '../../assets/img/github-icon.svg'
 
