@@ -64,25 +64,8 @@ function Header() {
           <AnchorLink className='px-3 text-white ' href="#beneficii">Beneficii</AnchorLink>
           <AnchorLink className='px-3 text-white ' href="#utilizatori">Utilizatori</AnchorLink>
           <AnchorLink className='px-3 text-white ' href="#ecosistem">Ecosistem</AnchorLink>
-          <AnchorLink className='pl-3 text-white ' href="#resurse">Resurse</AnchorLink>
-
-          {[
-            {
-              route: `/beneficii`,
-              title: `About`,
-            },
-            {
-              route: `/contact`,
-              title: `Contact`,
-            },
-          ].map((link) => (
-            <Link className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
-              key={link.title}
-              to={link.route}>
-              {link.title}
-            </Link>
-          ))}
-
+          <AnchorLink className='px-3 text-white ' href="#resurse">Resurse</AnchorLink>
+          <AnchorLink className='px-3 text-white ' href="#contact">Contact</AnchorLink>
         </nav>
       </div>
     </header>
