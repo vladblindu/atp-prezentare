@@ -10,7 +10,7 @@ function Header() {
     <header className="sticky top-0 bg-secondary">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-2 mx-auto md:p-4">
         <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
+          <h1 className="flex flex-start text-white no-underline">
             <svg
               className="w-8 h-8 mr-2 fill-current"
               height="54"
@@ -54,7 +54,6 @@ function Header() {
         <nav className={`${ isExpanded ? `block` : `hidden`} md:block md:flex md:items-center w-full md:w-auto`}>
           <AnchorLink className='px-3 py-2 block text-white ' href="#beneficii">Beneficii</AnchorLink>
           <AnchorLink className='px-3 py-2 block text-white ' href="#utilizatori">Utilizatori</AnchorLink>
-          <AnchorLink className='px-3 py-2 block text-white ' href="#resurse">Resurse</AnchorLink>
           <AnchorLink className='px-3 py-2 block text-white ' href="#ecosistem">Ecosistem</AnchorLink>
           <AnchorLink className='px-3 py-2 block text-white ' href="#contact">Contact</AnchorLink>
         </nav>

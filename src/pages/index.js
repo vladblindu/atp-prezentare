@@ -46,8 +46,8 @@ export default () => (
         </p>
       </div>
     </section>
-    <section id="beneficii" className="py-20 lg:pb-40 lg:pt-48">
-      <div className="container mx-auto text-center">
+    <section id="beneficii" className="py-20 lg:pt-48">
+      <div className="container px-16 mx-auto text-center">
         <Heading>Beneficii</Heading>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
@@ -86,7 +86,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="utilizatori" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="utilizatori" className="py-20 lg:pt-48">
       <div className="container mx-auto">
         <div className="container mx-auto text-center">
           <Heading>Cui se adreseaza</Heading>
@@ -109,9 +109,6 @@ export default () => (
         }
         secondarySlot={<img className="w-full" src={editorImage} alt="schema ecosistem"/>}
       />
-    </section>
-
-    <section>
       <SplitSection
         reverseOrder
         primarySlot={
@@ -129,8 +126,6 @@ export default () => (
         }
         secondarySlot={<img className="w-full" src={prestatorImage} alt="prestatori"/>}
       />
-    </section>
-    <section id='resurse'>
       <SplitSection
         primarySlot={
           <div className="lg:pr-32 xl:pr-48">
@@ -149,7 +144,7 @@ export default () => (
     </section>
 
     <section id='ecosistem' className="py-20 lg:pt-32">
-      <div className="container mx-auto text-center justify-center">
+      <div className="container px-16 mx-auto text-center justify-center">
         <Subtitle>
           Ecosistem
         </Subtitle>
@@ -169,8 +164,8 @@ export default () => (
           cuprindă toate entitățile implicate în creatia de mmedia audio bazata pe servicii de voce, dar și
           de exemplu a serviciilor de ilustrație de carte de care editurile au nevoie.
         </p>
-        <div className="pl-48 lg:w-auto">
-          <img src={ecosystemImage} alt="hero"/>
+        <div className=" lg:w-full ">
+          <img src={ecosystemImage} className=' lg:w-full lg:h-full ' alt="hero"/>
         </div>
       </div>
 
