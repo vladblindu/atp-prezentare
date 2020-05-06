@@ -10,15 +10,17 @@
     "deploy": "node ./bin/deploy.js"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.18",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-theme-codebushi": "1.0.0",
+    "prop-types": "latest",
     "react": "^16.12.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.12.0",
+    "react-google-recaptcha": "^2.0.1",
     "react-helmet": "latest",
-    "prop-types": "latest",
     "tailwindcss": "latest"
   },
   "devDependencies": {
@@ -30,8 +32,10 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "formik": "^2.1.4",
     "ftp": "^0.3.10",
     "glob": "latest",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "yup": "^0.28.5"
   }
 }
