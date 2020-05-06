@@ -5,7 +5,6 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Audio Text Portal`,
     description: `Gatsby starter styled with Tailwind`,
     author: `@taylorbryant`,
   },

@@ -1,19 +1,10 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { Link } from "gatsby";
 import React, { useState } from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './../../css/styles.css'
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-      query SiteTitleQuery {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
-      }
-  `);
 
   return (
     <header className="sticky top-0 bg-secondary">
@@ -44,8 +35,8 @@ function Header() {
               </g>
             </svg>
 
-            <span className="text-xl font-bold tracking-tight">
-              {site.siteMetadata.title}
+            <span className="text-2xl font-bold tracking-tight">
+                  AUDIO<strong className='text-primary-lighter'>TEXT</strong>
             </span>
           </h1>
         </Link>
@@ -61,11 +52,11 @@ function Header() {
         </button>
 
         <nav className={`${ isExpanded ? `block` : `hidden`} md:block md:flex md:items-center w-full md:w-auto`}>
-          <AnchorLink className='px-3 text-white ' href="#beneficii">Beneficii</AnchorLink>
-          <AnchorLink className='px-3 text-white ' href="#utilizatori">Utilizatori</AnchorLink>
-          <AnchorLink className='px-3 text-white ' href="#ecosistem">Ecosistem</AnchorLink>
-          <AnchorLink className='px-3 text-white ' href="#resurse">Resurse</AnchorLink>
-          <AnchorLink className='px-3 text-white ' href="#contact">Contact</AnchorLink>
+          <AnchorLink className='px-3 py-2 block text-white ' href="#beneficii">Beneficii</AnchorLink>
+          <AnchorLink className='px-3 py-2 block text-white ' href="#utilizatori">Utilizatori</AnchorLink>
+          <AnchorLink className='px-3 py-2 block text-white ' href="#resurse">Resurse</AnchorLink>
+          <AnchorLink className='px-3 py-2 block text-white ' href="#ecosistem">Ecosistem</AnchorLink>
+          <AnchorLink className='px-3 py-2 block text-white ' href="#contact">Contact</AnchorLink>
         </nav>
       </div>
     </header>

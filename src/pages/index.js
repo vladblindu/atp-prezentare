@@ -8,15 +8,16 @@ import editorImage from './../assets/img/editor.png'
 import prestatorImage from './../assets/img/prestatori.png'
 import consumatorImage from './../assets/img/consumator.png'
 import AppIcon from '../components/AppIcon'
+import Title from '../components/mix/Title'
+import Subtitle from '../components/mix/SubTitle'
+import Heading from '../components/mix/Heading'
 
 export default () => (
   <Layout>
     <section className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none">
-            AUDIO TEXT PORTAL
-          </h1>
+          <Title>AUDIO text PORTAL</Title>
           <p className="text-xl lg:text-2xl mt-6 font-light mr-5 text-justify">
             Un portal destinat tuturor serviciilor și produselor implicate in producția de audiobook, servicii de
             voice-over,
@@ -28,7 +29,7 @@ export default () => (
         </div>
       </div>
       <div className="container mx-auto px-8">
-        <h3 className="mt-12 text-2xl lg:text-3xl xl:text-4xl font-bold leading-none">MOTIVAȚIE</h3>
+        <Subtitle>MOTIVAȚIE</Subtitle>
         <p className="text-lg lg:text-xl mt-6 font-light mr-5 text-justify">
           Trăim într-o lume în continuă schimbare, căreia trebuie să-i acceptam provocările și să le transformăm în
           atu-uri. Fiecare dintre noi păstrează, ca pe mici comori, amintirea unor clipe minunate petrecute în compania
@@ -45,9 +46,9 @@ export default () => (
         </p>
       </div>
     </section>
-    <section id="beneficii" className="py-20 lg:pb-40 lg:pt-64">
+    <section id="beneficii" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Beneficii</h2>
+        <Heading>Beneficii</Heading>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
@@ -88,7 +89,7 @@ export default () => (
     <section id="utilizatori" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold">Cui se adreseaza</h2>
+          <Heading>Cui se adreseaza</Heading>
         </div>
         <p className="text-lg lg:text-xl text-light text-center">
           <strong>AUDIOTEXT</strong> are trei categorii principale de utilizatori:
@@ -97,7 +98,7 @@ export default () => (
       <SplitSection
         primarySlot={
           <div className="lg:pr-32 xl:pr-48">
-            <h3 className="text-4xl font-semibold leading-tight">Edituri și publicații</h3>
+            <Subtitle>Edituri și publicații</Subtitle>
             <p className="mt-8 text-xl font-light leading-relaxed text-justify">
               oferindu-le comunicarea personalizată către consumatorii lor, precum și fidelizarea acestora pe canale
               proprii. Editurilor care încă nu au dezvoltat acest segment - de publicații digitale -
@@ -109,41 +110,15 @@ export default () => (
         secondarySlot={<img className="w-full" src={editorImage} alt="schema ecosistem"/>}
       />
     </section>
-      <section id='ecosistem' className="py-20 lg:pt-32">
-        <div className="container mx-auto text-center justify-center">
-          <h3 className="text-4xl font-semibold leading-tight">
-            Ecosistem
-          </h3>
-          <p className="mt-8 pb-12 text-xl font-light leading-relaxed text-justify">
-            Platforma va pune la dispoziția editorilor o metodă de realizare a unor producții în colaborare. Astfel, un
-          editor poate adăuga o propunere de produs, atașând un eșantion sau un text integral dintr-o lucrare pe care
-          dorește să o transforme într-un material digital, dar pentru a cărui realizare nu are puterea financiară sau nu
-          dorește să-l finanțeze. Producătorii pot să solicite participarea în colaborare, propunând un preț de execuție
-          pentru serviciul specific fiecăruia. Odată validați de către editor, cererea pentru serviciul respectiv se
-          închide; producătorul devine co-producător la produs, urmând a primi un cuantum din veniturile provenite din
-          vânzarea acestui produs. Acest cuantum se calculează în funcție de cota de participare, dată de prețul stabilit
-          pentru serviciul prestat raportat la prețul total de producție, după cum au fost stabilite inițial cu editorul.
-          Când toate serviciile sunt acoperite, producătorii demarează execuția acestora. După realizarea produsului
-          final, editorul îl va încărca pe fluxul de distribuție/promovare. Acest produs va purta un cod special și, la
-          fiecare vânzare a unei unități, platforma va direcționa sume către părți în cuantumurile stabilite.
-          Audiotext isi propune să fie mai mult decât o aplicație, își proune să devina un ecosistem care să
-          cuprindă toate entitățile implicate în creatia de mmedia audio bazata pe servicii de voce, dar și
-          de exemplu a serviciilor de ilustrație de carte de care editurile au nevoie.
-          </p>
-          <div className="pl-48 lg:w-auto">
-            <img src={ecosystemImage} alt="hero"/>
-          </div>
-        </div>
 
-      </section>
     <section>
       <SplitSection
         reverseOrder
         primarySlot={
           <div className="lg:pl-32 xl:pl-48">
-            <h3 className="text-4xl font-semibold leading-tight">
+            <Subtitle>
               Presatori de servicii
-            </h3>
+            </Subtitle>
             <p className="mt-8 text-xl font-light leading-relaxed text-justify">
               specifice publicațiilor digitale: studiouri audio sau tehnicieni de sunet
               free-lanceri, actori de voce profesioniști sau amatori, agenți și impresari ce pot să-și prezinte cu
@@ -159,9 +134,9 @@ export default () => (
       <SplitSection
         primarySlot={
           <div className="lg:pr-32 xl:pr-48">
-            <h3 className="text-4xl font-semibold leading-tight">
+            <Subtitle>
               Consumatorul final
-            </h3>
+            </Subtitle>
             <p className="mt-8 text-xl font-light leading-relaxed text-justify">
               de audiobook ce va gasi intreaga ofertă de produse din această categorie, într-o arhivă online, pe care o
               poate accesa de pe orice dispozitiv mobil și în plus, acces la recenzii,
@@ -173,6 +148,32 @@ export default () => (
       />
     </section>
 
+    <section id='ecosistem' className="py-20 lg:pt-32">
+      <div className="container mx-auto text-center justify-center">
+        <Subtitle>
+          Ecosistem
+        </Subtitle>
+        <p className="mt-8 pb-12 text-xl font-light leading-relaxed text-justify">
+          Platforma va pune la dispoziția editorilor o metodă de realizare a unor producții în colaborare. Astfel, un
+          editor poate adăuga o propunere de produs, atașând un eșantion sau un text integral dintr-o lucrare pe care
+          dorește să o transforme într-un material digital, dar pentru a cărui realizare nu are puterea financiară sau nu
+          dorește să-l finanțeze. Producătorii pot să solicite participarea în colaborare, propunând un preț de execuție
+          pentru serviciul specific fiecăruia. Odată validați de către editor, cererea pentru serviciul respectiv se
+          închide; producătorul devine co-producător la produs, urmând a primi un cuantum din veniturile provenite din
+          vânzarea acestui produs. Acest cuantum se calculează în funcție de cota de participare, dată de prețul stabilit
+          pentru serviciul prestat raportat la prețul total de producție, după cum au fost stabilite inițial cu editorul.
+          Când toate serviciile sunt acoperite, producătorii demarează execuția acestora. După realizarea produsului
+          final, editorul îl va încărca pe fluxul de distribuție/promovare. Acest produs va purta un cod special și, la
+          fiecare vânzare a unei unități, platforma va direcționa sume către părți în cuantumurile stabilite.
+          Audiotext isi propune să fie mai mult decât o aplicație, își proune să devina un ecosistem care să
+          cuprindă toate entitățile implicate în creatia de mmedia audio bazata pe servicii de voce, dar și
+          de exemplu a serviciilor de ilustrație de carte de care editurile au nevoie.
+        </p>
+        <div className="pl-48 lg:w-auto">
+          <img src={ecosystemImage} alt="hero"/>
+        </div>
+      </div>
 
+    </section>
   </Layout>
 );
