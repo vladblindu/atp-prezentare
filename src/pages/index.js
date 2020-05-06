@@ -15,7 +15,7 @@ import Heading from '../components/mix/Heading'
 export default () => (
   <Layout>
     <section className="pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex">
+      <div className="container px-20 pb-6 mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <Title>AUDIO text PORTAL</Title>
           <p className="text-xl lg:text-2xl mt-6 font-light mr-5 text-justify">
@@ -28,7 +28,7 @@ export default () => (
           <img src={heroImage} alt="hero"/>
         </div>
       </div>
-      <div className="container mx-auto px-8">
+      <div className="container px-20 mx-auto">
         <Subtitle>MOTIVAȚIE</Subtitle>
         <p className="text-lg lg:text-xl mt-6 font-light mr-5 text-justify">
           Trăim într-o lume în continuă schimbare, căreia trebuie să-i acceptam provocările și să le transformăm în

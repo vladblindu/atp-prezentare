@@ -8,8 +8,8 @@ function Header() {
 
   return (
     <header className="sticky top-0 bg-secondary">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-2 mx-auto md:p-4">
-        <Link to="/">
+      <div className="flex flex-wrap items-center justify-between p-2 mx-auto md:p-2">
+        <Link to="/" className='md:pl-12 mx-auto'>
           <h1 className="flex flex-start text-white no-underline">
             <svg
               className="w-8 h-8 mr-2 fill-current"
@@ -51,7 +51,7 @@ function Header() {
           </svg>
         </button>
 
-        <nav className={`${ isExpanded ? `block` : `hidden`} md:block md:flex md:items-center w-full md:w-auto`}>
+        <nav className={`${ isExpanded ? `block` : `hidden`} md:block md:flex md:items-center w-full md:w-auto pr-10 mx-auto text-2xl`}>
           <AnchorLink className='px-3 py-2 block text-white ' href="#beneficii">Beneficii</AnchorLink>
           <AnchorLink className='px-3 py-2 block text-white ' href="#utilizatori">Utilizatori</AnchorLink>
           <AnchorLink className='px-3 py-2 block text-white ' href="#ecosistem">Ecosistem</AnchorLink>
