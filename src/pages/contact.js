@@ -5,7 +5,6 @@ import * as Yup from 'yup'
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo"
 import Recaptcha from 'react-google-recaptcha'
-import {graphql, useStaticQuery} from 'gatsby'
 import SubmitButton from '../components/submit-button'
 
 const initialValues = {
@@ -33,16 +32,11 @@ const ContactPage = () => {
 
     const [recaptcha, setRecaptcha] = React.useState(false)
 
-    const {site} = useStaticQuery(graphql`
-    query apiKeyQuery {
-        site {
-            siteMetadata {
-                  apiKey,
-                  recaptchaKey
-            }
-        }
-    }
-  `)
+
+    const apiKey = 'temporary-development-key'
+    const recaptchaKey = '6LdmSvEUAAAAAEzb7u2hvzONKBWfBkmIjf2BRfPb'
+
+
     const onSubmit = (values, {setSubmitting, resetForm}) => {
         setSubmitting(true)
         setTimeout(() => {
