@@ -106,15 +106,17 @@ const ContactPage = () => {
                                 name="message"
                                 component="div"
                                 className="mb-6 text-sm text-error italic"/>
-                            <div className="w-full flex justify-between">
-
-                                <SubmitButton disabled={isSubmitting || !recaptcha}/>
+                            <div className="w-full block lg:flex justify-between ">
                                 <Recaptcha
-                                    className="transform scale-75 md:scale-100 border-2 border-secondary"
+                                  className='mb-6 overflow-hidden border-secondary border-2'
                                     onChange={() => {
                                         setRecaptcha(true)
                                     }}
-                                    sitekey={recaptchaKey}/>
+                                    sitekey={recaptchaKey}
+
+                                />
+
+                                <SubmitButton disabled={isSubmitting || !recaptcha}/>
                             </div>
                         </Form>
                 }

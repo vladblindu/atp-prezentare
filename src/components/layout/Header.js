@@ -7,7 +7,7 @@ function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <header className="sticky top-0 bg-secondary">
+    <header className="sticky top-0 bg-secondary z-2">
       <div className="flex flex-wrap items-center justify-between p-2 mx-auto md:p-2">
         <Link to="/" className='md:pl-12 mx-auto'>
           <h1 className="flex flex-start text-white no-underline">
