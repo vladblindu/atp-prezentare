@@ -2,10 +2,13 @@ import React from "react"
 import {ErrorMessage, Field, Form, Formik} from 'formik'
 import cx from 'classnames'
 import * as Yup from 'yup'
-import Layout from "../components/layout/Layout"
-import SEO from "../components/seo"
+
+import SEO from "./seo"
 import Recaptcha from 'react-google-recaptcha'
-import SubmitButton from '../components/submit-button'
+import SubmitButton from './submit-button'
+import Subtitle from './mix/SubTitle'
+import Container from './mix/Container'
+
 
 const initialValues = {
     name: '',
@@ -47,14 +50,15 @@ const ContactPage = () => {
         }, 500)
     }
 
-    return <Layout>
+    return <>
         <SEO
             keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
             title="Contact"
         />
+        <Container>
         <section className="mx-auto w-4/5 md:w-3/5">
-            <h1 className="text-xl font-bold mb-8">CONTACT FORM</h1>
-            <p className=" mb-8 leading-loose">
+            <Subtitle>CONTACT FORM</Subtitle>
+            <p className=" mb-8 mt-8 leading-loose">
                 Please fill in the contact form. We will reply as soon as possible to your messages.
             </p>
             <Formik initialValues={initialValues}
@@ -110,13 +114,14 @@ const ContactPage = () => {
                                     onChange={() => {
                                         setRecaptcha(true)
                                     }}
-                                    sitekey={site.siteMetadata.recaptchaKey}/>
+                                    sitekey={recaptchaKey}/>
                             </div>
                         </Form>
                 }
             </Formik>
         </section>
-    </Layout>
+            </Container>
+  </>
 }
 
 export default ContactPage
