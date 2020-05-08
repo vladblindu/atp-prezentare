@@ -6,7 +6,7 @@ import Utilizatori from '../components/Utilizatori'
 import Beneficii from '../components/Beneficii'
 import AudioText from '../components/AudioText'
 
-export default () => (
+const MainPage = () =>
   <Layout>
 
     <section className="pt-20 md:pt-40">
@@ -22,12 +22,14 @@ export default () => (
     </section>
 
     <section id='ecosistem' className="py-20 lg:pt-32">
-        <Ecosistem/>
+      <Ecosistem/>
     </section>
 
     <section id='contact' className="py-20 lg:pt-24">
-       <ContactPage/>
+      <ContactPage/>
     </section>
 
   </Layout>
-);
+
+
+export default MainPage

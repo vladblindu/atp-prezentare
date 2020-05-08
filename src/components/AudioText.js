@@ -1,37 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import flat from 'flat'
 import ContainerLeft from './mix/ContainerLeft'
 import Title from './mix/Title'
-//import heroImage from '../assets/img/hero.png'
 import Subtitle from './mix/SubTitle'
-import Connect from './connect'
 
-const MainCover = ({ src }) =>{
-  console.log(src)
-  return <div className="lg:w-1/2">
-    <img src={src} alt="hero"/>
-  </div>
+
+const Connect = ({ children }) => {
+  const query = graphql`
+  query getHeadArticle {
+     strapiArticle(shortID: {eq: "HOME"}) {
+      title,
+      body,
+      mainCover {
+        childImageSharp {
+          fluid(maxWidth: 700, maxHeight: 323) {
+            src
+          }
+        }
+      }
+    }
+   }`
+
+  const data = useStaticQuery(query)
+
+  return React.cloneElement(
+    React.Children.only(children),
+    {
+      src: flat(data)['strapiArticle.mainCover.childImageSharp.fluid.src'],
+      body: flat(data)['strapiArticle.body'],
+      title: flat(data)['strapiArticle.title']
+    }
+  )
+
 }
 
-MainCover.propTypes = {
-  src: PropTypes.string
-}
 
-const AudioText = () =>
+export const Markup = ({ src, body, title }) =>
   <>
     <ContainerLeft>
       <div className="text-center lg:text-left lg:w-1/2">
-        <Title>AUDIO text PORTAL</Title>
+        <Title>{title}</Title>
         <p className="text-xl lg:text-2xl mt-6 font-light mr-5 text-justify">
-          Un portal destinat tuturor serviciilor și produselor implicate in producția de audiobook, servicii de
-          voice-over,
-          publicare și consum de materiale audio cu text sursă.
+          {body}
         </p>
       </div>
-      <Connect dataPath={'strapiArticle.mainCover.childImageSharp.fixed.src'}>
-        <MainCover/>
-      </Connect>
+      <div className="lg:w-1/2">
+        <img src={src} alt="hero"/>
+      </div>
     </ContainerLeft>
     <div className="container px-16 mx-auto">
       <Subtitle>MOTIVAȚIE</Subtitle>
@@ -49,4 +66,13 @@ const AudioText = () =>
       </p>
     </div>
   </>
+
+Markup.propTypes = {
+  src: PropTypes.string,
+  body: PropTypes.string,
+  title: PropTypes.string
+}
+
+const AudioText =  () => <Connect><AudioText/></Connect>
+
 export default AudioText
