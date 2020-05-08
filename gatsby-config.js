@@ -1,15 +1,21 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
+require('dotenv').config()
+const resolveConfig = require('tailwindcss/resolveConfig')
+const tailwindConfig = require('./tailwind.config.js')
+const fullConfig = resolveConfig(tailwindConfig)
 
-const fullConfig = resolveConfig(tailwindConfig);
+const env = process.env.NODE_ENV || "development"
+const apiUrl = JSON.parse(process.env.API_URL)[env]
+const recaptchaKey = process.env.RECAPTCHA_KEY
+const apiKey = process.env.API_KEY
+
 
 module.exports = {
   siteMetadata: {
-    title: ``,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
-    apiKey: '9dd384a3-17a0-4fae-b6c6-7e979e6a982b',
-    recaptchaKey:'6LdmSvEUAAAAAEzb7u2hvzONKBWfBkmIjf2BRfPb',
+    title: `Audiotext Portal`,
+    description: `Platforma tranzactionare audiobook-uir`,
+    author: `@AUDIOBOOK MARKET SRL`,
+    apiKey: apiKey,
+    recaptchaKey: recaptchaKey
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,12 +29,32 @@ module.exports = {
         theme_color: `#FBB040`,
         display: `standalone`,
         icon: 'src/assets/img/icon_light.png'
-      },
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: apiUrl,
+        queryLimit: 1000, // Default to 100
+        contentTypes: ['section', 'article'],
+        loginData: {
+          identifier:'',
+          password: ''
+        }
+      }
     },
     {
-      resolve: `gatsby-theme-codebushi`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        tailwindConfig: `tailwind.config.js`
+        name: `audiotext-portal`,
+        short_name: `bbs`,
+        start_url: `/`,
+        theme_color: fullConfig.theme.colors.primary,
+        background_color: fullConfig.theme.colors.secondary,
+        display: `minimal-ui`,
+        icon: `src/assets/img/icon_light.png`
       }
     },
     {
@@ -42,6 +68,24 @@ module.exports = {
             : [])
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/assets/css/style.css`]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `lato`,
+          `open sans:200,400,400i,700`
+        ],
+        display: 'swap'
+      }
+    },
+    `gatsby-plugin-offline`
   ]
-};
+}

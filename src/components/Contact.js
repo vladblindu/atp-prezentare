@@ -3,7 +3,7 @@ import {ErrorMessage, Field, Form, Formik} from 'formik'
 import cx from 'classnames'
 import * as Yup from 'yup'
 
-import SEO from "./seo"
+import SEO from "./layout/seo"
 import Recaptcha from 'react-google-recaptcha'
 import SubmitButton from './submit-button'
 import Subtitle from './mix/SubTitle'
