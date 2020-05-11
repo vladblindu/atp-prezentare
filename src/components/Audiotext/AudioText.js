@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import flat from 'flat'
 import ContainerLeft from '../mix/ContainerLeft'
 import Title from '../mix/Title'
-import Motivatie from './Motivatie'
+//import Motivatie from './Motivatie'
 
 
 const Connect = ({ children }) => {
