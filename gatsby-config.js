@@ -8,7 +8,7 @@ const apiUrl = JSON.parse(process.env.API_URL)[env]
 const recaptchaKey = process.env.RECAPTCHA_KEY
 const apiKey = process.env.API_KEY
 
-
+console.log(process.env.API_KEY)
 module.exports = {
   siteMetadata: {
     title: `Audiotext Portal`,

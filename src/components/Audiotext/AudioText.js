@@ -50,7 +50,7 @@ export const Markup = ({ src, body, title }) =>
         <img src={src} alt="hero"/>
       </div>
     </ContainerLeft>
-    <Motivatie/>
+    {/*<Motivatie/>*/}
   </>
 
 Markup.propTypes = {
