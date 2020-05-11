@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from '../components/layout/Layout'
 import ContactPage from '../components/Contact'
 import Ecosistem from '../components/Ecosistem'
-import Utilizatori from '../components/Utilizatori'
-import Beneficii from '../components/Beneficii'
-import AudioText from '../components/AudioText'
+import Utilizatori from '../components/Utilizatori/Utilizatori'
+import Beneficii from '../components/Beneficii/Beneficii'
+import AudioText from '../components/Audiotext/AudioText'
 
 export default () => (
   <Layout>
