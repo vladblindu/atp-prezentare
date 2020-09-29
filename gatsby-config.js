@@ -37,11 +37,17 @@ module.exports = {
         postCssPlugins: [
           require(`tailwindcss`)(tailwindConfig),
           require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : [])
+          require(`cssnano`)
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options:{
+        printRejected: false,
+        develop: true,
+        tailwind: true
       }
     }
   ]
-};
+}
